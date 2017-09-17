@@ -14,7 +14,10 @@ public class Picture
     private Square wall;
     private Square window;
     private Triangle roof;
+    private Triangle roof2;
     private Circle sun;
+    private Person guy;
+    private Person chew;
 
     /**
      * Constructor for objects of class Picture
@@ -30,6 +33,7 @@ public class Picture
     public void draw()
     {
         wall = new Square();
+        wall.changeColor("black");
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
         wall.changeSize(120);
@@ -42,18 +46,38 @@ public class Picture
         window.changeSize(40);
         window.makeVisible();
 
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
+        roof = new Triangle();
+        roof.changeColor("white");
+        roof.changeSize(45, 180);
+        roof.moveHorizontal(-11);
+        roof.moveVertical(-95);
         roof.makeVisible();
-
+        
+        roof2 = new Triangle();
+        roof2.changeColor("white");
+        roof2.changeSize(-45, 180);
+        roof2.moveHorizontal(-9);
+        roof2.moveVertical(25);
+        roof2.makeVisible();
+        
         sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
+        sun.changeColor("white");
+        sun.moveHorizontal(-60);
+        sun.moveVertical(-60);
+        sun.changeSize(150);
         sun.makeVisible();
+        
+        guy = new Person();
+        guy.changeColor("white");
+        guy.moveHorizontal(80);
+        guy.moveVertical(28);
+        
+        chew = new Person();
+        chew.changeColor("yellow");
+        chew.moveHorizontal(40);
+        chew.moveVertical(28);
+        
+        
     }
 
     /**
