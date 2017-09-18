@@ -16,8 +16,11 @@ public class Picture
     private Triangle roof;
     private Triangle roof2;
     private Circle sun;
-    private Person guy;
     private Person chew;
+    private Person han;
+    private Person luke;
+    private Person leia;
+    
 
     /**
      * Constructor for objects of class Picture
@@ -67,16 +70,25 @@ public class Picture
         sun.changeSize(150);
         sun.makeVisible();
         
-        guy = new Person();
-        guy.changeColor("white");
-        guy.moveHorizontal(80);
-        guy.moveVertical(28);
-        
         chew = new Person();
         chew.changeColor("yellow");
         chew.moveHorizontal(40);
         chew.moveVertical(28);
         
+        han = new Person();
+        han.changeColor("white");
+        han.moveHorizontal(80);
+        han.moveVertical(28);
+        
+        luke = new Person();
+        luke.changeColor("white");
+        luke.moveHorizontal(120);
+        luke.moveVertical(28);
+        
+        leia = new Person();
+        leia.changeColor("white");
+        leia.moveHorizontal(160);
+        leia.moveVertical(28);
         
     }
 
@@ -88,9 +100,10 @@ public class Picture
         if (wall != null)   // only if it's painted already...
         {
             wall.changeColor("black");
-            window.changeColor("white");
-            roof.changeColor("black");
-            sun.changeColor("black");
+            window.changeColor("black");
+            roof.changeColor("white");
+            sun.changeColor("white");
+            chew.changeColor("white");
         }
     }
 
@@ -101,10 +114,10 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         {
-            wall.changeColor("red");
+            wall.changeColor("black");
             window.changeColor("black");
-            roof.changeColor("green");
-            sun.changeColor("yellow");
+            roof.changeColor("white");
+            sun.changeColor("white");
         }
     }
 }
